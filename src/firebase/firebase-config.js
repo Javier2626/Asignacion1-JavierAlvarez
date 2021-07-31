@@ -2,6 +2,8 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
+
+//ejemplo de config
 const firebaseConfig = {
     apiKey: "AIzaSyDFXW2W2SNV0lmj8HJogeu267hdD2HR5WE",
     authDomain: "react-app-cursos.firebaseapp.com",
