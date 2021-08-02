@@ -1,0 +1,110 @@
+
+body {
+    height: 100vh;
+    // background: #6c8999;
+    // font-family: 'Poppins', sans-serif
+}
+
+.cardp {
+    max-width: 300px;
+    border: none;
+    border-radius: 10px
+    
+}
+.card-text {
+    max-width: 300px;
+    border: none;
+    border-radius: 10px
+   
+
+    
+    
+}
+
+.card-title {
+    font-weight: bold 
+    
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #E1E1E1;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    
+    
+    
+    
+    
+    
+}
+
+
+// img {
+//     // width: 62px;
+//     // height: auto;
+//     // display:block;max-width:100%;height:auto;
+//     // top: auto;
+
+// //     padding: 5px 5px 5px 5px;
+// // overflow:hidden;
+
+// width: 90%;
+// 	// float: left;
+// 	padding: 30px 50px;
+// 	// box-sizing: border-box;
+//     align-items: center;
+
+// }
+
+// .center {
+//     margin-left: auto;
+//     margin-right: auto;
+//     display: block;
+
+//     display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.users img {
+    border-radius: 50%;
+    border: none;
+    margin-right: -15px;
+    width: 35px;
+    height: 32px
+    
+    
+}
+
+.text-success {
+    background-color: #D7FCDD;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-right: 11px
+}
+
+p {
+    font-size: 14px;
+    color: #0c0c0c !important
+}
+
+
+.btnp {
+    border-radius: 22px;
+    border: none;
+    height: 40px;
+    width: 100%
+    background-color #0c103b;
+    background: #22c486
+}
+

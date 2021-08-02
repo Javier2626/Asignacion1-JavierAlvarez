@@ -4,7 +4,7 @@ export const Mobiles = [
     {
         'id': 'SAM GALAXY S21',
         'modelo':'Samsung galaxy s20', 
-        'categoria':'Samsung', 
+        'categoria':'Samsung',
         'almacenamiento':'128GB 8RAM',
         'precio':'15,000.00',      
         'puntuacion':'5(20)'

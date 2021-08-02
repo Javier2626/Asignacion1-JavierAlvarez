@@ -8,7 +8,7 @@ export const MarcasList = ( {categoria} ) => {
 
     const Mobiles = getmarcasbycategoria( categoria );
     return (
-        <div className="card-columns animate__animated animate__fadeIn">
+        <div className="card-columns animate__animated animate__fadeIn  " justify-content="center"   >
             {
                 Mobiles.map( mobil => (
                     <ProdCard 

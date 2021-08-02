@@ -1,0 +1,96 @@
+
+@import "../base/settings";
+
+
+.navbar {
+    width: 100%;
+    height: 180px;
+
+    background-color: $dark-grey;
+    display: flex ;
+    justify-content: flex-start;
+
+    
+    // align-items: center;
+       
+    
+        // overflow: hidden;
+        
+
+        // background-color: #333;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+        
+}
+
+
+
+// .container {
+//     width: 100%;
+//     padding-right: 15px;
+//     padding-left: 15px;
+//     margin-right: auto;
+//     margin-left: auto;
+    
+//     padding-top: 200px;
+    
+    
+// }
+
+
+.na {
+    width: 100%;
+    height: 120px;
+
+    background-color: $dark-grey;
+    display: flex ;
+    // justify-content: flex-start;
+
+    // position: fixed;
+   
+    align-items: center;
+       
+
+}
+
+
+
+
+.navbar a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px;
+    
+
+
+}
+
+
+.form-search {
+    width: 400px;
+    height: 40px;
+    background-color: #C4C4C4;
+    padding-right: 5px;
+    border-radius: 15px;
+    margin: 100px;
+    margin-right: 0px;
+    text-align: center;    
+    // justify-content: flex-end;
+    
+}
+.search-a{
+    align-content: center;
+    padding-right: 5px;
+
+    
+} 
+
+
+
+        
+
+
+

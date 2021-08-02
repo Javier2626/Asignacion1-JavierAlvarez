@@ -2,8 +2,8 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { AppleScreen } from '../componentes/apple/AppleScreen';
-import { LoginScreen } from '../componentes/auth/LoginScreen';
-import { RegisterScreen } from '../componentes/auth/RegisterScreen';
+// import { LoginScreen } from '../componentes/auth/LoginScreen';
+// import { RegisterScreen } from '../componentes/auth/RegisterScreen';
 import { HomeScreen } from '../componentes/home/HomeScreen';
 import { HuaweiScreen } from '../componentes/huawei/HuaweiScreen';
 import { MarcasScreen } from '../componentes/marcas/MarcasScreen';

@@ -1,38 +1,73 @@
 
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
+// import "../../styles/componentes/navbar";
+
+
+import { startLogout } from '../../actions/auth';
 
 export const Navbar = () => {
+   
+   
+
+    const dispatch = useDispatch();
+
+    const hanleLogout = () => {
+        dispatch( startLogout() )
+    }
+
+   
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        // <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+       
+       
+       <nav className="navbar">
             
-            
+
+            <div className="na">
             <Link 
                 className="navbar-brand" 
                 to="/"
-            >
-                Logo MobileStore
+            >                
+                <img src={`./assets/logo/logoms.PNG`} width="280" height="80" alt=" "></img>
                 
             </Link>
 
-            <div className="navbar-collapse">
-                <div className="navbar-nav">
+                   <form className="form-inline my-2 my-lg-0">
+                   <input className="form-search" type="search" placeholder="Search" aria-label="Search"/>
+                   <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                   </form>
 
-            <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            </div>
+                 
+                            
+           
+            {/* <a className="nav-item dropdown">
+             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorias
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a className="dropdown-item" href="#">Action</a></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
                </ul>
-              </li>
-                     
-                     
-                     
+              </a> */}
+            <div className="dropdown">
+            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categorias
+            </button>
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a className="dropdown-item" href="#">Action</a>
+                <a className="dropdown-item" href="#">Another action</a>
+                <a className="dropdown-item" href="#">Something else here</a>
+            </div>
+            </div>
+            
+
                      <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
+                        className="btn btn-secondary"
                         exact
                         to="/home"
                     >
@@ -42,6 +77,7 @@ export const Navbar = () => {
                     <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
+                        className="btn btn-secondary"
                         exact
                         to="/apple"
                     >
@@ -51,6 +87,7 @@ export const Navbar = () => {
                     <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
+                        className="btn btn-secondary"
                         exact
                         to="/samsung"
                     >
@@ -60,6 +97,7 @@ export const Navbar = () => {
                     <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
+                        className="btn btn-secondary"
                         exact
                         to="/huawei"
                     >
@@ -69,6 +107,7 @@ export const Navbar = () => {
                     <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
+                        className="btn btn-secondary"
                         exact
                         to="/xiaomi"
                     >
@@ -84,30 +123,34 @@ export const Navbar = () => {
                         Search
                     </NavLink>
 
-                   
-
-                </div>
-               
-            </div>
-
-
-            <form className="d-flex">
-                   <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                   <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
-                <ul className="navbar-nav ml-auto">
+                    <a className="navbar-nav ml-auto">
                     <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
                         to="/auth/login"
                     >
-                        Logout
-                    </NavLink>
-                </ul>
-            </div>
+                        login 
+                        
+                    </NavLink>  
+                    </a>
+                     
+                    <NavLink 
+
+                        activeClassName="active"
+                        className="nav-item nav-link" 
+                        onClick={ hanleLogout }
+                        exact
+                        to="/auth/login"
+                    >
+                        logout 
+                    </NavLink>                                 
+                    
+               
+              
+
+               
+
         </nav>
     )
 }
