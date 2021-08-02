@@ -124,7 +124,7 @@ export const Navbar = () => {
                     </NavLink>
 
                     <a className="navbar-nav ml-auto">
-                    <NavLink 
+                    {/* <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
                         exact
@@ -132,7 +132,7 @@ export const Navbar = () => {
                     >
                         login 
                         
-                    </NavLink>  
+                    </NavLink>   */}
                     </a>
                      
                     <NavLink 

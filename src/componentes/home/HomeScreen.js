@@ -3,6 +3,7 @@ import React from 'react';
 import { MarcasList } from '../marcas/MarcasList'
 
 
+
 export const HomeScreen = () => {
     // <div className="container mt-10  "></div>
 
@@ -30,6 +31,13 @@ export const HomeScreen = () => {
 
     )
 }
+
+
+
+
+
+
+
 
 
 

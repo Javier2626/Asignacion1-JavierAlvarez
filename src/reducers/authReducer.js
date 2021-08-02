@@ -1,10 +1,9 @@
 
-
 import { types } from '../types/types';
 /*
     {
         uid: 'jagdfjahdsf127362718',
-        name: 'Fernando'
+        name: 'Javier'
     }
 
 */
@@ -16,6 +15,8 @@ export const authReducer = ( state = {}, action ) => {
                 uid: action.payload.uid,
                 name: action.payload.displayName
             }
+
+            
 
         case types.logout:
                 return { }

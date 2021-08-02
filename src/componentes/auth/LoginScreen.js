@@ -33,19 +33,6 @@ export const LoginScreen = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     return (
         <>
             <h3 className="auth__title">Iniciar sesion</h3>
@@ -54,7 +41,7 @@ export const LoginScreen = () => {
             <form onSubmit={ handleLogin }>
 
             <div className="auth__social-networks">
-                    <p>Iniciar con redes sociales</p>
+                    {/* <p>Iniciar con redes sociales</p> */}
 
                     <div 
                         className="google-btn"
@@ -83,11 +70,7 @@ export const LoginScreen = () => {
                 </div>
                 <hr />
 
-                  
-                 
-
-
-
+                                   
 
 
                 <input 
@@ -108,6 +91,8 @@ export const LoginScreen = () => {
                     value={ password }
                     onChange={ handleInputChange }
                 />
+
+                
 
 
                 <button
