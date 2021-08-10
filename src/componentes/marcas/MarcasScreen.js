@@ -4,9 +4,9 @@
 
 import React, { useMemo } from 'react';
 import { useParams, Redirect } from 'react-router-dom';
-import { Container } from 'reactstrap';
 
-import { useDispatch, useSelector } from 'react-redux';
+
+import { useDispatch } from 'react-redux';
 
 import { startNewcalificacion } from '../../actions/calificacion';
 

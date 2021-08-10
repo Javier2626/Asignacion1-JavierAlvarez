@@ -41,18 +41,8 @@ export const Navbar = () => {
 
             </div>
                  
-                            
-           
-            {/* <a className="nav-item dropdown">
-             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorias
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-               </ul>
-              </a> */}
-            <div className="dropdown">
+            
+            {/* <div className="dropdown">
             <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Categorias
             </button>
@@ -61,14 +51,14 @@ export const Navbar = () => {
                 <a className="dropdown-item" href="#">Another action</a>
                 <a className="dropdown-item" href="#">Something else here</a>
             </div>
-            </div>
+            </div> */}
             
 
                      <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
                         className="btn btn-secondary"
-                        exact
+                        // exact
                         to="/home"
                     >
                         Home
@@ -78,7 +68,7 @@ export const Navbar = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         className="btn btn-secondary"
-                        exact
+                        // exact
                         to="/apple"
                     >
                         Apple
@@ -88,7 +78,7 @@ export const Navbar = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         className="btn btn-secondary"
-                        exact
+                        // exact
                         to="/samsung"
                     >
                         Samsung
@@ -98,7 +88,7 @@ export const Navbar = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         className="btn btn-secondary"
-                        exact
+                        // exact
                         to="/huawei"
                     >
                         Huawei
@@ -108,7 +98,7 @@ export const Navbar = () => {
                         activeClassName="active"
                         className="nav-item nav-link" 
                         className="btn btn-secondary"
-                        exact
+                        // exact
                         to="/xiaomi"
                     >
                         Xiaomi
@@ -117,7 +107,7 @@ export const Navbar = () => {
                     <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
-                        exact
+                        // exact
                         to="/search"
                     >
                         Search

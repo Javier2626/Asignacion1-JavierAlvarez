@@ -1,7 +1,7 @@
 
 
 
-import { type, types } from '../types/types';
+import { types } from '../types/types';
 
 const initialState = {
     calificaciones: [],

@@ -6,8 +6,6 @@ import { store } from './store/store';
 import { AppRouters } from './routers/AppRouters';
 
 
-import { useSelector } from 'react-redux';
-import { ProductosContext } from './componentes/productos/ProductosContext';
 
 export const MobstoreApp = () => {
     

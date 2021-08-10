@@ -1,8 +1,7 @@
 
 import React from 'react';
 
-import { MarcasList } from '../marcas/MarcasList'
-import { useSelector } from 'react-redux';
+
 import { Cellist } from '../marcas/Cellist';
 
 
@@ -30,9 +29,7 @@ export const HomeScreen = () => {
 
         <hr />
 
-        {/* <MarcasList categoria={"Celulares"} /> */}
-        {/* <MarcasList categoria={"Celulares"} /> */}
-        
+     
 
         
 
