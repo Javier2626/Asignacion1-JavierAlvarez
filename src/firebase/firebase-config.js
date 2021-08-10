@@ -9,6 +9,7 @@ import 'firebase/auth';
 const firebaseConfig = {
     apiKey: "AIzaSyCga0qxOzVqkMDKvSGTQoMfCKltWB9TV0o",
     authDomain: "asingnacion1-javier.firebaseapp.com",
+    // databaseURL: "https://asingnacion1-javier-default-rtdb.firebaseio.com/",
     projectId: "asingnacion1-javier",
     storageBucket: "asingnacion1-javier.appspot.com",
     messagingSenderId: "610265343854",

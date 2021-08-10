@@ -59,21 +59,33 @@ export const SearchScreen = ( { history } ) => {
                         />
 
                         <button
-                            type="submit"
+                            type="submitR"
                             className="btn m-1 btn-block btn-outline-primary"
                         >
                             Search...
                         </button>
                     </form>
-
-
-                </div>
-
-
-                <div className="col-7">
-
-                    <h4> Results </h4>
+                    <div>
+                <h4> Results </h4>
                     <hr />
+                    
+                    
+                    </div>
+
+
+                </div>                   
+
+
+                          
+
+
+                <div className="card-columns animate__animated animate__fadeIn  " justify-content="center"   >
+
+                <div className="cardR">
+                
+                
+
+                    
 
                    
                     {
@@ -85,6 +97,7 @@ export const SearchScreen = ( { history } ) => {
                         ))
                     }
 
+                </div>
                 </div>
 
             </div>

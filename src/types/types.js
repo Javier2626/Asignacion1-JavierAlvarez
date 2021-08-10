@@ -12,4 +12,19 @@ export const types = {
     uiStartLoading: '[UI] Start loading',
     uiFinishLoading: '[UI] Finish loading',
 
+    celLoad: '[cel] Load cel',
+
+
+    calificacionAddNew: '[Calificacion] Nueva calificacion',    
+    calificacionLoad: '[calificacion] Cargar calificacion',
+    calificacionUpdated: '[calificacion] Updated calificacion',
+
+
+    calificacionActive: '[Notes] Set active note',
+    // notesFileUrl: '[Notes] Updated image url',
+    // notesDelete: '[Notes] Delete note',
+    // notesLogoutCleaning: '[Notes] Logout Cleaning',
+
+
+
 }

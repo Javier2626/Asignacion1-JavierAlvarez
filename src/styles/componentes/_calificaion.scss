@@ -1,0 +1,108 @@
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 2.25rem;
+    margin-bottom: -1px;
+    background-color: #fff0;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.list-group-item-precio{
+    position: relative;
+    display: block;
+    padding: 1rem 2.25rem;
+    margin-bottom: -1px;
+    background-color: #fff0;
+    
+    font-size: 20px;
+    padding-left: 20rem;
+}
+
+
+
+
+
+
+.btnreturn {
+    background-color: #1155718f;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0px 25px 7px 30px;
+    transition: color .3s ease;
+    margin-left: 25rem;
+}
+
+.btnenviar {
+    background-color: #1155718f;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0px 25px 7px 30px;
+    transition: color .3s ease;
+    margin-left: 88%;
+
+
+}
+
+
+
+
+
+.mt-5 {
+    margin-top: 20px;
+    background-color: #e8e8e8;
+    padding: 1.25rem;
+
+
+    border-radius: 1rem;
+
+    border-color: black;
+    
+
+}
+
+
+
+ .animated {
+    -webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    transition: height 0.2s;
+}
+
+.stars
+{
+    margin: 20px 0;
+    font-size: 24px;
+    color: #d17581;
+}
+
+
+
+.cardcalificaion {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #E1E1E1;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: .25rem;
+    border-color: black;
+
+}
+
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    background-color: #dfdfdf;
+
+}
+
+

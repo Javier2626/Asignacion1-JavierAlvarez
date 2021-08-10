@@ -26,8 +26,13 @@
 
 .btn-primary {
     background-color: $primary;
-    border-radius: 15px;
-    margin-left: 1ex;
+    border-radius: 10px;
+    margin-left: 18ex;
+    margin-bottom: 1ex;
+
+    font-size: 12px;
+    padding: 8px;
+    
     
     &:disabled {
         background-color: lighten($color: $primary, $amount: 15);
@@ -37,6 +42,9 @@
         background-color: darken($color: $primary, $amount: 15);
     }
 }
+
+
+
 
 .btn-block {
     width: 100%;

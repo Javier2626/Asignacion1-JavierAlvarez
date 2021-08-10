@@ -19,6 +19,11 @@ import { PublicRoute } from './PublicRoute';
 import { login } from '../actions/auth';
 import { useDispatch } from 'react-redux';
 import { firebase } from '../firebase/firebase-config'
+import {loadcel } from "../helpers/loadcel";
+import { setCel, startLoadingCel } from "../actions/cel";
+import { loadCalificaiones } from "../helpers/loadcalificaiones";
+import { setCalificaciones } from "../actions/calificacion";
+
 
 
 
@@ -30,17 +35,53 @@ export const AppRouters = () => {
     const [ checking, setChecking ] = useState(true);
     const [ isLoggedIn, setIsLoggedIn ] = useState(false);
 
+    
+    
 
 
     useEffect(() => {
+
         
-        firebase.auth().onAuthStateChanged( async(user) => {
+
+        
+        firebase.auth().onAuthStateChanged( async (user) => {
+
+            
+
 
             if ( user?.uid ) {
                 dispatch( login( user.uid, user.displayName ) );
                 setIsLoggedIn( true );
+                dispatch( startLoadingCel() );
 
-                // dispatch( startLoadingcel( user.uid ) );
+
+                const calificaciones = loadCalificaiones( user.uid );
+                // const calificaciones = loadCalificaiones( user.uid );
+                // dispatch( setCalificaciones );
+
+              
+
+                // dispatch( startLoadingCel() );
+
+                // loadcel( );
+                //  console.log(celSnap);
+                // console.log(cel);
+
+            //    const cel = await loadcel( user.uid );
+            //     dispatch( setCel ( cel ) );
+            // console.log(cel);
+
+            
+
+            
+
+                
+                
+
+                // console.log(cel);
+                // const cel = loadcel( user.id)
+
+
 
             } else {
                 setIsLoggedIn( false );

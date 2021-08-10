@@ -1,6 +1,6 @@
 
 *{
-    font-family:  Helvetica, Arial, sans-serif;
+    font-family:   Arial,Helvetica, sans-serif;
     margin: 0px;
 }
 
@@ -9,6 +9,13 @@
 //     width: 100vw;
     
 // }
+
+
+body {
+    height: 100vh;
+    background: #ffffff2e;
+    // font-family: 'Poppins', sans-serif
+}
 
 
 
@@ -21,6 +28,10 @@
     column-gap: 1.25rem;
     orphans: 1;
     widows: 1;
+    content: counter();
+    
+    flex-direction: column;
+    
 
     // // width: 25%;
     // float: left;
@@ -29,9 +40,124 @@
     
 }
 
-// div {
+.products-container{
+    height: 100%;
+    width: 300px;
+    // overflow: hidden;
+    text-align: center;
+    // font-variant: small-caps;
+    
+    box-shadow:0px 0px 15px-5px;
+    
+   display: contents;
+
+   flex-direction: row;
+
+   
+    // margin: 6rem;
+    // margin-top: 2rem;
+    // padding-top: 2rem ;
+
+  
+
+}
+
+
+.product-card{
+
+
+  content: ""; 
+  display: block;
+  clear: both; 
+}
+
+
+
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    // margin-left: 5px;
+    
+}
+
+
+.img-est {
+    max-width: 50%;
+    height: auto;
+    // margin-left: 5px;
+    
+}
+
+
+
+.card-columns .card {
+    display: inline-block;
+    width: 100%;
+}
+
+.card-columns .card {
+    margin-bottom: .75rem;
+}
+.card {
+    position: relative;
+    display: flex;
+    // flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #E1E1E1;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: .25rem;
+}
+
+.product-img{
+  display: flex;
+  flex-direction: column;
+  height: 210px;
+  border-radius: .25rem;
+  
+}
+
+.product-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.product-det{
+    font-size: 15px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.product-price{
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+// div{
+
 //     display: contents;
 // }
+
+
 
 .container {
     width: 100%;
@@ -39,6 +165,8 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+
+    // display: contents; // COrreccion
     
     padding-top: 200px;
     
@@ -71,4 +199,18 @@ main {
 
 .pointer {
     cursor: pointer;
+}
+
+
+
+
+
+
+.col-7{
+    position: relative;
+    width: 100%;
+    padding-right: 290px;
+    padding-left: 18px;
+    margin-top:10px;
+
 }

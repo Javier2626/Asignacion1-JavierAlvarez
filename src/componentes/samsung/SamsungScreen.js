@@ -8,7 +8,7 @@ export const SamsungScreen = () => {
             <h1>Samsung</h1>
             <hr />
 
-            <MarcasList categoria="Samsung" />
+            <MarcasList marca="Samsung" />
 
         </div>
     )

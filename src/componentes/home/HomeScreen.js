@@ -1,11 +1,19 @@
 
 import React from 'react';
+
 import { MarcasList } from '../marcas/MarcasList'
+import { useSelector } from 'react-redux';
+import { Cellist } from '../marcas/Cellist';
+
 
 
 
 export const HomeScreen = () => {
     // <div className="container mt-10  "></div>
+
+    // const {cellist} = useSelector(state => state.cellist);
+    // console.log(cellist)
+
 
 
     return (
@@ -22,20 +30,26 @@ export const HomeScreen = () => {
 
         <hr />
 
-        <MarcasList categoria={"Samsung"} />
+        {/* <MarcasList categoria={"Celulares"} /> */}
+        {/* <MarcasList categoria={"Celulares"} /> */}
+        
+
+        
+
+        <Cellist/>
+
+
+
 
       </div>
+
+      
 
 
 
 
     )
 }
-
-
-
-
-
 
 
 
