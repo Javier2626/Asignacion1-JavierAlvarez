@@ -114,7 +114,7 @@ export const RegisterScreen = () => {
 
 <button
     type="submit"
-    className="btn btn-primary btn-block mb-5"
+    className="btn btn-primary-log btn-block mb-5"
 >
     Register
 </button>
