@@ -1,5 +1,6 @@
 
 
+import { MarcasScreen } from "../componentes/marcas/MarcasScreen";
 import { db } from "../firebase/firebase-config";
 import { types } from "../types/types";
 
@@ -12,13 +13,16 @@ export const startNewcalificacion = () => {
 
 
         const uid = getstate().auth.uid;
+        const name = getstate().auth.name;
 
+        
         const newcalificacion = {
             
-            puntuacion: '',
-            usuario: '',
-            comentario: '',
+            puntuacionEst: '',
+            usuario: name,
+            comentario: 'Comenatario',
             data: new Date().getTime()
+            
 
         }
 

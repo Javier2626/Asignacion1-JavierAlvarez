@@ -1,7 +1,7 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 // import "../../styles/componentes/navbar";
 
 
@@ -9,7 +9,8 @@ import { startLogout } from '../../actions/auth';
 
 export const Navbar = () => {
    
-   
+    const {name} = useSelector(state => state.auth);
+    // console.log(name);
 
     const dispatch = useDispatch();
 
@@ -31,6 +32,7 @@ export const Navbar = () => {
                 to="/"
             >                
                 <img src={`./assets/logo/logoms.PNG`} width="280" height="80" alt=" "></img>
+                
                 
             </Link>
 
@@ -124,7 +126,14 @@ export const Navbar = () => {
                         
                     </NavLink>   */}
                     </a>
-                     
+                     <span className="nav-item nav-link text-info">
+                        Bienvenido, {name}
+                     </span>
+
+
+
+
+
                     <NavLink 
 
                         activeClassName="active"

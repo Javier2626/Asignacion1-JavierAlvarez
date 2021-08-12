@@ -2,16 +2,17 @@
 
 
 
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useParams, Redirect } from 'react-router-dom';
 
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { startNewcalificacion } from '../../actions/calificacion';
 
 
 import { getmarcasbyid } from '../../selectors/getmarcasbyid';
+import { useForm } from '../../hooks/useForm';
 
 
 
@@ -19,12 +20,31 @@ import { getmarcasbyid } from '../../selectors/getmarcasbyid';
 
 export const MarcasScreen = ({ history }) => {
 
+
+
     const dispatch = useDispatch();
+
+    const [ isLoggedIn, setIsLoggedIn ] = useState(false);
+
 
     const { marcaid } = useParams();
 
     const cate = useMemo(() => getmarcasbyid( marcaid ), [ marcaid ]);
 
+
+    const [ formValues, handleInputChange, reset ] = useForm(  );
+
+    const { Comentario } = formValues;
+
+    const {name} = useSelector(state => state.auth);
+    console.log(name);
+
+    // const { body, title, id } = formValues;
+    // const { puntuacionEst, usuario, comentario } = formValues;
+
+
+
+    
     if ( !cate ) {
         return <Redirect to="/" />;
     }
@@ -63,13 +83,19 @@ export const MarcasScreen = ({ history }) => {
 
         
     } = cate;
+
+   
+
     
     return (
         <div className="ContainerDetalles">
         <div className="row mt-5">
+            
             <div className="col-4">
                 <img 
-                    src={ `../assets/celulares/${ marcaid }.jpg` }
+                    // src={ `../assets/celulares/${ marcaid }.jpg` }
+                    src={foto} 
+
                     alt={ modelo }
                     className="img-thumbnail animate__animated "
                 />
@@ -95,7 +121,8 @@ export const MarcasScreen = ({ history }) => {
 
                 <button 
                     className="btnreturn btn-outline-info"
-                    onClick={ handleReturn }
+                    onClick={ handleReturn }                   
+
                 >
                     Return
                 </button>
@@ -157,20 +184,51 @@ export const MarcasScreen = ({ history }) => {
             </p>
                        
            
-                <input type="text" placeholder="Comentario" 
-                class="form-control" name="searchText" autocomplete="off" ></input>
+
+
+
+                
+
+
+                <input 
+                type="text" 
+                placeholder="Comentario" 
+                class="form-control"
+                name="ComentarioText" 
+                autocomplete="off"
+                value={ Comentario }
+                // readOnly="true"          
+                // value={ comentario } 
+                 // onChange={ handleInputChange }
+
+                >
+
                     
+                </input>
+
+                <div class="alert alert-danger  align-items-center" role="alert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"></svg>
+                <div>
+                    Debe iniciar sesion
+                </div>
+                </div>
+
                     <button 
                     className="btnenviar btn-outline-info"
                     onClick={handleAddNew}
-                    >Enviar...</button>
+                    
+
+                    >Enviar...                    
+                    
+                    
+                    </button>
+
                     
                     <br/>
                     <br/>
                     <br/>
 
                 
-
 
 
 

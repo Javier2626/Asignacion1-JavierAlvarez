@@ -27,9 +27,9 @@ export const DashboardRouters = () => {
                 <Route exact path="/huawei" component={ HuaweiScreen } />
                 <Route exact path="/xiaomi" component={ XiaomiScreen } />
                 <Route exact path="/search" component={ SearchScreen } />
-{/* 
+
                 <Route exact path="/auth/login" component={ AuthRouter } />
-                <Route exact path="/auth/register" component={ AuthRouter } /> */}
+                <Route exact path="/auth/register" component={ AuthRouter } /> 
                                 
 
 

@@ -2,7 +2,8 @@ import React, { useEffect, useState }  from "react";
 import {
   BrowserRouter as Router,
   Switch,
-//   Redirect
+  Route,
+  Redirect
 
   } from "react-router-dom";
 
@@ -42,8 +43,8 @@ export const AppRouters = () => {
 
             
 
-            if ( user?.uid ) {
-                dispatch( login( user.uid, user.displayName ) );
+            // if ( user?.uid ) {
+                // dispatch( login( user.uid, user.displayName ) );
                 setIsLoggedIn( true );
                 dispatch( startLoadingCel() );
 
@@ -65,9 +66,9 @@ export const AppRouters = () => {
                                     
 
 
-            } else {
-                setIsLoggedIn( false );
-            }
+            // } else {
+            //     setIsLoggedIn( false );
+            // }
 
             setChecking(false);
 
@@ -88,10 +89,20 @@ export const AppRouters = () => {
       <Router>
           <div>
               <Switch>
-                  <PublicRoute 
+
+
+              <Route  path="/" component={ DashboardRouters }  />
+              <Route   path="/auth"  component={ AuthRouter }  />
+
+                
+
+
+
+                  {/* <PublicRoute 
                       path="/auth"
                       component={ AuthRouter }
                       isAuthenticated={ isLoggedIn }
+                      
                   />
 
                   <PrivateRoute 
@@ -99,10 +110,12 @@ export const AppRouters = () => {
                       isAuthenticated={ isLoggedIn }
                       path="/"
                       component={ DashboardRouters }
-                       />
+                       /> */}
+
+
                   
 
-                  {/* <Redirect to="/auth/login" /> */}
+                  <Redirect to="/home" />
 
 
               </Switch>

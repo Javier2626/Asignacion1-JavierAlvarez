@@ -5,6 +5,7 @@ import { types } from '../types/types';
 import { startLoading, finishLoading } from './ui';
 
 
+
 export const startLoginEmailPassword = (email, password) => {
     return (dispatch) => {
 
@@ -54,17 +55,28 @@ export const startGoogleLogin = () => {
     return ( dispatch ) => {
 
         firebase.auth().signInWithPopup( googleAuthProvider )
+        
+        
           
         .then( ({ user }) => {
                    dispatch(
                     login( user.uid, user.displayName )
-        )});
+                   
+        
+                    
+        ) });
+        
             //  .then(  userCred  => {
-            //     console.log(userCred);
+                // console.log(userCred);
                              
             // });
+        
+
+           
+
 
     }
+
 }
 
 
@@ -74,6 +86,9 @@ export const login = (uid, displayName) => ({
         uid,
         displayName
     }
+
+
+
 });
 
 

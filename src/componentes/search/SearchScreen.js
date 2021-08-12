@@ -48,7 +48,7 @@ export const SearchScreen = ( { history } ) => {
                     <form onSubmit={ handleSearch }>
                     
 
-                        <input 
+                         <input 
                             type="text"
                             placeholder="Find your hero"
                             className="form-control"
