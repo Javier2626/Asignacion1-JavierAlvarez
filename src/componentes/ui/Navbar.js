@@ -116,14 +116,14 @@ export const Navbar = () => {
                     </NavLink>
 
 
-                    <NavLink 
+                    {/* <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
                         // exact
                         to="/cali"
                     >
                         Prueba context
-                    </NavLink>
+                    </NavLink> */}
 
 
 
