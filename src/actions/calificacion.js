@@ -8,25 +8,28 @@ import { types } from "../types/types";
 
 
 
-export const startNewcalificacion = () => {
+export const startNewcalificacion = ( ComentarioC ) => {
     return async( dispatch, getstate) => {
 
 
         const uid = getstate().auth.uid;
         const name = getstate().auth.name;
+        
+
+        console.log( ComentarioC );
 
         
-        const newcalificacion = {
+        const newcalificacion  = {
             
-            puntuacionEst: '',
+            puntuacionEst: '5',
             usuario: name,
-            comentario: 'Comenatario',
-            data: new Date().getTime()
+            comentario: 'Testing comment',
+            data: new Date()
             
 
         }
 
-        const doc = await db.collection(`${ uid }/journal/notes`).add( newcalificacion )
+        const doc = await db.collection(`${ uid }/journal/notes`).add( newcalificacion ) 
 
         console.log( doc );
 

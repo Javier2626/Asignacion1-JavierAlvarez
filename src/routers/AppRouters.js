@@ -22,6 +22,7 @@ import { firebase } from '../firebase/firebase-config'
 import { startLoadingCel } from "../actions/cel";
 import { loadCalificaiones } from "../helpers/loadcalificaiones";
 // import { setCalificaciones } from "../actions/calificacion";
+import ScrollToTop from 'react-router-scroll-top'
 
 
 
@@ -41,6 +42,11 @@ export const AppRouters = () => {
                 
         firebase.auth().onAuthStateChanged( async (user) => {
 
+
+            
+            if ( user?.uid ) {
+                dispatch( login( user.uid, user.displayName ) );
+            }
             
 
             // if ( user?.uid ) {
@@ -87,6 +93,7 @@ export const AppRouters = () => {
 
     return (
       <Router>
+          <ScrollToTop>
           <div>
               <Switch>
 
@@ -120,6 +127,7 @@ export const AppRouters = () => {
 
               </Switch>
           </div>
+          </ScrollToTop>
       </Router>
   )
 }

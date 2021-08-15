@@ -115,6 +115,19 @@ export const Navbar = () => {
                         Search
                     </NavLink>
 
+
+                    <NavLink 
+                        activeClassName="active"
+                        className="nav-item nav-link" 
+                        // exact
+                        to="/cali"
+                    >
+                        Prueba context
+                    </NavLink>
+
+
+
+
                     <a className="navbar-nav ml-auto">
                     {/* <NavLink 
                         activeClassName="active"
@@ -142,7 +155,7 @@ export const Navbar = () => {
                         exact
                         to="/auth/login"
                     >
-                        logout 
+                        login 
                     </NavLink>                                 
                     
                

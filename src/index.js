@@ -4,11 +4,10 @@ import { MobstoreApp } from './MobstoreApp';
 import './styles/styles.scss';
 
 
-
 ReactDOM.render(
- 
+    
     <MobstoreApp />,
- 
+    
   document.getElementById('root')
 );
 

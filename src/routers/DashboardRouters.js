@@ -2,6 +2,8 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { AppleScreen } from '../componentes/apple/AppleScreen';
+import { Cali } from '../componentes/cali/cali';
+
 // import { LoginScreen } from '../componentes/auth/LoginScreen';
 // import { RegisterScreen } from '../componentes/auth/RegisterScreen';
 import { HomeScreen } from '../componentes/home/HomeScreen';
@@ -27,10 +29,14 @@ export const DashboardRouters = () => {
                 <Route exact path="/huawei" component={ HuaweiScreen } />
                 <Route exact path="/xiaomi" component={ XiaomiScreen } />
                 <Route exact path="/search" component={ SearchScreen } />
+                <Route exact path="/cali" component={ Cali } />
+
+                
 
                 <Route exact path="/auth/login" component={ AuthRouter } />
                 <Route exact path="/auth/register" component={ AuthRouter } /> 
-                                
+
+                            
 
 
                 <Redirect to="/home"  />
