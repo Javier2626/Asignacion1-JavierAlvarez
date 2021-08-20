@@ -16,7 +16,7 @@ import { AuthRouter } from './AuthRouter';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 import { login } from '../actions/auth';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { firebase } from '../firebase/firebase-config'
 
 import { startLoadingCel } from "../actions/cel";
@@ -27,14 +27,21 @@ import ScrollToTop from 'react-router-scroll-top'
 
 
 
+
 export const AppRouters = () => {
 
+   
+    
 
   const dispatch = useDispatch();
 
     const [ checking, setChecking ] = useState(true);
     const [ isLoggedIn, setIsLoggedIn ] = useState(false);
 
+
+
+   
+    
         
 
 
@@ -89,6 +96,8 @@ export const AppRouters = () => {
         )
     }
 
+
+ 
 
 
     return (

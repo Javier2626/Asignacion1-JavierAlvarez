@@ -6,7 +6,7 @@ import { db } from "../firebase/firebase-config";
 export const loadcel = async ( id ) => {
     
     // const celSnap = await db.collection(`${ uid }/journal/notes`).get();
-    const celSnap = await db.collection(`/celulares`).get();
+    const celSnap = await db.collection(`/Productos`).get();
 
 
     const cel =[];

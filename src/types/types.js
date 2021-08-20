@@ -25,6 +25,9 @@ export const types = {
     // notesDelete: '[Notes] Delete note',
     // notesLogoutCleaning: '[Notes] Logout Cleaning',
 
+    uiOpenModal: '[ui] Open modal',
+    uiCloseModal: '[ui] Close modal',
+
 
 
 }

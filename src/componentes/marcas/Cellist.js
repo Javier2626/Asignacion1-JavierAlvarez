@@ -18,10 +18,7 @@ export const Cellist = () => {
 
         
     return (
-
-
-         
-
+        
 
         <div className="card-columns animate__animated animate__fadeIn  " justify-content="center"   >
             {

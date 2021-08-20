@@ -25,7 +25,10 @@ export class ProductsContextProvider extends React.Component {
         // db.collection("celulares").where("marca", "==", "Samsung").onSnapshot(snapshot => {
             
             // db.collection('/ZiyeJLovaJQahrNfa2dPOnQQt2l1/journal/notes').where("celular", "==", "SAM GALAXY S21").onSnapshot(snapshot => {
-                db.collection('/ZiyeJLovaJQahrNfa2dPOnQQt2l1/journal/notes').onSnapshot(snapshot => {
+                
+
+                // db.collection('/calificaciones/').onSnapshot(snapshot => {
+                db.collection("calificaciones").orderBy("data", "desc").onSnapshot(snapshot => {
             let changes = snapshot.docChanges();
             changes.forEach(change => {
                 if (change.type === 'added') {
@@ -35,7 +38,7 @@ export class ProductsContextProvider extends React.Component {
                         data: change.doc.data().data,
                         puntuacionEst: change.doc.data().puntuacionEst,
                         celular: change.doc.data().celular,
-                       
+                        
                         usuario: change.doc.data().usuario
                         
                         

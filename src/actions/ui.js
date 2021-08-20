@@ -17,3 +17,14 @@ export const finishLoading = () => ({
     type: types.uiFinishLoading
 })
 
+export const uiOpenModal = () => ({
+    type: types.uiOpenModal
+});
+
+
+export const uiCloseModal = () => ({
+    type: types.uiCloseModal
+});
+
+
+

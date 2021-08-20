@@ -8,7 +8,7 @@ import { types } from "../types/types";
 
 
 
-export const startNewcalificacion = ( ComentarioC ) => {
+export const startNewcalificacion = ( ComentarioC, valueS, modelo) => {
     return async( dispatch, getstate) => {
 
 
@@ -21,15 +21,19 @@ export const startNewcalificacion = ( ComentarioC ) => {
         
         const newcalificacion  = {
             
-            puntuacionEst: '5',
+            puntuacionEst: (valueS),
             usuario: name,
-            comentario: 'Testing comment',
-            data: new Date()
+            // comentario: 'Testing comment',
+            comentario: (ComentarioC),
+            data: new Date().getTime(),
+            idproducto: (modelo)
             
 
         }
 
-        const doc = await db.collection(`${ uid }/journal/notes`).add( newcalificacion ) 
+        // const doc = await db.collection(`${ uid }/journal/notes`).add( newcalificacion ) 
+        const doc = await db.collection(`/calificaciones/`).add( newcalificacion ) 
+
 
         console.log( doc );
 

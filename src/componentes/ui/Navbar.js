@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { startLogout } from '../../actions/auth';
 
-export const Navbar = () => {
+export const Navbar = ({LOGu}) => {
    
     const {name} = useSelector(state => state.auth);
     // console.log(name);
@@ -17,6 +17,45 @@ export const Navbar = () => {
     const hanleLogout = () => {
         dispatch( startLogout() )
     }
+
+
+    
+     
+        if(name == null){
+            console.log('can register data LOGIN') 
+             LOGu = 'Login'
+                            
+        }else{
+            console.log('you even are registered LOGOUT') 
+            LOGu = 'Logout'
+                          
+           
+        }
+        // console.log(LOGu);
+
+    
+
+        
+//     <ul>
+//     {name ?
+//       <li>lo</li> :
+//       null}
+      
+//     {name ?
+//       <li><a>Cerrar Sesión</a></li> : (
+//         <li>
+//           <Link to='/Login'>
+//             Iniciar sesión
+//           </Link>
+//         </li>
+//       )}
+//   </ul>
+  
+  
+
+    
+
+    
 
    
     return (
@@ -37,7 +76,7 @@ export const Navbar = () => {
             </Link>
 
                    <form className="form-inline my-2 my-lg-0">
-                   <input className="form-search" type="search" placeholder="Search" aria-label="Search"/>
+                   <input className="form-search" type="search" placeholder="Search" aria-label="Search"  maxlength="30"/>
                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                    </form>
 
@@ -116,14 +155,14 @@ export const Navbar = () => {
                     </NavLink>
 
 
-                    {/* <NavLink 
+                     {/* <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
                         // exact
                         to="/cali"
                     >
                         Prueba context
-                    </NavLink> */}
+                    </NavLink>  */}
 
 
 
@@ -138,6 +177,7 @@ export const Navbar = () => {
                         login 
                         
                     </NavLink>   */}
+
                     </a>
                      <span className="nav-item nav-link text-info">
                         Bienvenido, {name}
@@ -145,7 +185,7 @@ export const Navbar = () => {
 
 
 
-
+                    
 
                     <NavLink 
 
@@ -154,8 +194,13 @@ export const Navbar = () => {
                         onClick={ hanleLogout }
                         exact
                         to="/auth/login"
-                    >
-                        login 
+                    >               
+
+                                        
+                                             
+                        {LOGu}
+                        
+
                     </NavLink>                                 
                     
                
