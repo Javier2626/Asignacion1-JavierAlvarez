@@ -53,8 +53,8 @@ export const MarcasScreen = ({ history }) => {
     // const { Comentario } = formValues;
 
     const {name} = useSelector(state => state.auth);
-    console.log(name);
-    console.log("prevProducts");
+    // console.log(name);
+    // console.log("prevProducts");
 
     
 
@@ -63,11 +63,11 @@ export const MarcasScreen = ({ history }) => {
 
 
     const { products } = useContext(ProductsContext);
-    console.log(products);
+    // console.log(products);
 
 
     const noteData = moment(products.data);
-    console.log(noteData)
+    // console.log(noteData)
 
 
     
@@ -97,9 +97,9 @@ export const MarcasScreen = ({ history }) => {
 
     const [valueS, setValueS] = React.useState();
 
-    console.log('cantidad');
+    // console.log('cantidad');
   
-    console.log(valueS);
+    // console.log(valueS);
     // console.log(newValue);
 
   
@@ -405,7 +405,7 @@ export const MarcasScreen = ({ history }) => {
                     onClick={() => {
 
                         if(name == null){
-                            console.log('can register data') 
+                            // console.log('can register data') 
                             Appl()
                                             
                         }else{
@@ -416,16 +416,21 @@ export const MarcasScreen = ({ history }) => {
                                     App3()
                                     return false;}    
 
-                            console.log('you even are registered') 
+                            // console.log('you even are registered') 
                             handleAddNew();
                             App();
                             // limpiar();
 
                             // resetInputField();
+
                             document.getElementById("prueba").value = "";
-                            
+
+
 
                             // actualizar();
+
+                            
+
                             
                         }                      
                         
